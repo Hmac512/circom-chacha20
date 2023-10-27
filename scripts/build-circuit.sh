@@ -1,7 +1,7 @@
 set -e
 echo "building circuit..."
 # circom circuits/circuit.circom --r1cs --wasm -p bls12381 --O2 --inspect -o resources/chacha20
-circom circuits/circuit.circom --r1cs --wasm --O2 --inspect -o resources/chacha20
+circom circuits/chacha20/circuit.circom --r1cs --wasm --O2 --inspect -o resources/chacha20
 mv resources/chacha20/circuit_js/circuit.wasm resources/chacha20/circuit.wasm
 rm -rf resources/chacha20/circuit_js
 echo "generating verification key..."
